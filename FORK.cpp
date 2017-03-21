@@ -3,16 +3,13 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 
-
 /**
  * The function to be executed by the grand child
  */
 void grand_child()
 {
-	
 	/** NOTE: getpid() returns the process id of the caller process **/
 	fprintf(stderr, "Hi! I am the grandchild. My pid is %d\n", getpid());
-	
 	
 	fprintf(stderr, "I am about to turn into a Firefox process!\n");
 	
@@ -28,8 +25,6 @@ void grand_child()
 	/** IF EXECLP SUCCEEDED, THEN WE WILL NEVER GET HERE **/
 	fprintf(stderr, "This line will never be executed\n");
 }
-
-
 
 /**
  * The function to be executed by the child
@@ -71,7 +66,6 @@ void child()
 			exit(-1);
 		}	
 	}
-	
 }
 
 int main(int argc, char** argv)
@@ -105,7 +99,6 @@ int main(int argc, char** argv)
 			perror("wait");
 			exit(-1);
 		}	
-	
 	}	
 	return 0;
 }

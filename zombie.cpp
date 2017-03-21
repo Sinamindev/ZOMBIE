@@ -1,4 +1,3 @@
-
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,11 +9,8 @@
  */
 void child()
 {
-		
 	/** NOTE: getpid() returns the process id of the caller process **/
-	fprintf(stderr, "Hi! I am the child. My pid is %d. I am done now...\n", getpid());
-	
-		
+	fprintf(stderr, "Hi! I am the child. My pid is %d. I am done now...\n", getpid());		
 }
 
 int main(int argc, char** argv)

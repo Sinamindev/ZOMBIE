@@ -10,8 +10,7 @@
  * The function to be executed by the child
  */
 void child()
-{
-		
+{		
 	/** NOTE: getpid() returns the process id of the caller process **/
 	fprintf(stderr, "Hi! I am the child. My pid is %d. I am immortal!\n", getpid());
 	
@@ -20,8 +19,7 @@ void child()
 	{
 		perror("execlp");
 		exit(-1);
-	}
-		
+	}	
 }
 
 int main(int argc, char** argv)
@@ -54,7 +52,6 @@ int main(int argc, char** argv)
 		sleep(60);
 		
 		exit(0);
-	
 	}	
 	return 0;
 }
